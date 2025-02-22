@@ -236,13 +236,13 @@ transform: translateY(-100%);
 
 .highlight__wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 .highlight{
     padding: 0 24px;
     width: calc(100% / 3);
     display: flex; 
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 .highlight__para{
@@ -264,6 +264,7 @@ transform: translateY(-100%);
 .highlight__subtitle{
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /* features */
@@ -355,11 +356,43 @@ footer{
     padding-top: 16px;
 }
 
+/* Small phones, tablets, and large Phones */
+
+@media (max-width:768px){
+.header__description{
+    padding: 0 24px;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 26px;
+}
+button{
+    font-size: 18px;
+}
+.book{
+    width: 50%;
+}
+
+}
+
+
+
+/* Small phones, and large Phones */
+
 @media (max-width:550px) {
+    .btn__menu{
+        display: block;
+    }
     .nav__links{
         display: none;
     }
-    .btn__menu{
-        display: block;
+    .highlight{
+        width: 100%;
+ 
+    }
+    .highlight:not(:last-child){
+        margin-bottom: 24px;
     }
 }
